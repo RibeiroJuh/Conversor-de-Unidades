@@ -1,0 +1,15 @@
+def conversor_de_unidades():
+    valor = float(input("Digite o valor a ser convertido: "))
+    de = input("Escolha a unidade de origem (celsius/fahrenheit): ").lower()
+    para = input("Escolha a unidade de destino (celsius/fahrenheit): ").lower()
+
+    if de == "celsius" and para == "fahrenheit":
+        resultado = (valor * 9/5) + 32
+    elif de == "fahrenheit" and para == "celsius":
+        resultado = (valor - 32) * 5/9
+    else:
+        resultado = valor  
+        
+    print("Resultado:", resultado)
+
+conversor_de_unidades()
