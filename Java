@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ConversorDeUnidades {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor a ser convertido: ");
+        double valor = scanner.nextDouble();
+
+        System.out.println("Escolha a unidade de origem (celsius/fahrenheit): ");
+        String de = scanner.next();
+
+        System.out.println("Escolha a unidade de destino (celsius/fahrenheit): ");
+        String para = scanner.next();
+
+        double resultado;
+
+        if (de.equals("celsius") && para.equals("fahrenheit")) {
+            resultado = (valor * 9/5) + 32;
+        } else if (de.equals("fahrenheit") && para.equals("celsius")) {
+            resultado = (valor - 32) * 5/9;
+        } else {
+            resultado = valor;
+        }
+
+        System.out.println("Resultado: " + resultado);
+    }
+}
